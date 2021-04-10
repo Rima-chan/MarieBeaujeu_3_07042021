@@ -1,0 +1,21 @@
+.btn {
+    border-radius: 30px;
+    background: $btn-bg;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 3rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    @include shadow;
+    transition: all 250ms;
+    &:hover {
+        background: $btn-bg-hover;
+        box-shadow: 2px 2px 10px #646363;
+    }
+    &:active {
+        text-decoration: none;
+    }
+}
+

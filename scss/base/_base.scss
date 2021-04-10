@@ -1,8 +1,37 @@
 *, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
+
+.responsive {
+    width:100%;
+    height:auto;
+    display: block;
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: $font-title-size;
+}
+
+h2 {
+    font-size: $font-title-size - .3rem;
+    padding-bottom: .5rem;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+

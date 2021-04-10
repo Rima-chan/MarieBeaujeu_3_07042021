@@ -1,0 +1,30 @@
+.localisation {
+    margin-top: 2px;
+    background: $cd-bg-localisation;
+    @include flex-center;
+    &__logo {
+        padding: 1rem .5rem;
+        color: #353535;
+    }
+    &__txt {
+        padding: 1rem .5rem;
+        font-size: .9rem;
+    }
+}
+
+.presentation {
+    background: $cd-bg-neutral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem 3rem 1rem;
+    &__claim {
+        padding: 0 2rem;
+    }
+    &__txt {
+        padding: 1rem 0 2rem 0;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}

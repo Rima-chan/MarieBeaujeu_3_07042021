@@ -1,0 +1,14 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: 2px 2px 10px #BFBABA;
+}
+
+ @mixin no-deco{
+     text-decoration: none;
+ }
+
+
