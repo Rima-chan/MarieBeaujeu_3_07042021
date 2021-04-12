@@ -22,16 +22,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;    
-            &__txt {
-                display: inline-flex;
-                flex-direction: column;
-            }
         }
         &:active {
             @include no-deco;
         }
     }
     
+}
+
+.description__txt {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-decoration: none;
+    margin-right: 2rem;
+    
+}
+
+.card-link {
+    @include no-deco;
+    color: #000;
 }
 
 .restau-picture {

@@ -35,6 +35,24 @@ p {
   font-size: 1.125rem;
 }
 
+@keyframes heart-btn {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes heart-hide {
+  0% {
+    color: #C552A5;
+  }
+  100% {
+    color: transparent;
+  }
+}
 .btn {
   border-radius: 30px;
   background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
@@ -54,6 +72,141 @@ p {
 }
 .btn:active {
   text-decoration: none;
+}
+
+.heart {
+  border: none;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart__icon {
+  background: #fff;
+  color: #000;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart__icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  display: block;
+  background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  transform-origin: bottom;
+  transition: height 1000ms;
+  z-index: -1;
+}
+
+.heart__icon:hover::before {
+  height: 100%;
+}
+
+.heart-2 {
+  background: #fff;
+}
+
+.heart__icon-2 {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  color: #000;
+  transform: scale(1);
+}
+
+.heart__icon-2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: scale(0);
+  font-weight: 900 !important;
+  color: transparent;
+}
+
+.heart__icon-2:active::before {
+  animation: heart-btn 1000ms;
+}
+
+.heart-3 {
+  background: #fff;
+}
+
+.heart__icon-3 {
+  width: 3vw;
+  height: 3vw;
+  position: relative;
+  z-index: 3;
+}
+
+.heart__icon-3-bis {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900 !important;
+  color: transparent;
+  opacity: 0;
+  z-index: 4;
+}
+
+.heart__icon-3:active {
+  animation: heart-hide 500ms 150ms forwards;
+}
+.heart__icon-3:active > .heart__icon-3-bis:active {
+  animation: heart-btn 250ms ease-out normal forwards;
+}
+
+.heart-4 {
+  width: 9vw;
+  height: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.heart__icon-4 {
+  width: 3vw;
+  height: 3vw;
+}
+
+.heart-4 label {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.heart-4 input[type=checkbox]:checked + label {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900 !important;
+  color: transparent;
+  animation: heart-btn 300ms ease-in-out;
+}
+.heart-4 input[type=checkbox]:checked + label > .far {
+  font-weight: 900;
 }
 
 .header__logo {
@@ -181,12 +334,21 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-.restaurants__card > .card__description__txt {
-  display: inline-flex;
-  flex-direction: column;
-}
 .restaurants__card:active {
   text-decoration: none;
+}
+
+.description__txt {
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000;
 }
 
 .restau-picture {

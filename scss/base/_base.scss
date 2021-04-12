@@ -35,3 +35,21 @@ p {
     font-size: 1.125rem;
 }
 
+@keyframes heart-btn {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes heart-hide {
+     0% {
+       color: #C552A5;
+    }
+    100% {
+        color:transparent;
+     }
+}
