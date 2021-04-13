@@ -2,7 +2,10 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./components/buttons";
+@import "./components/tags";
 @import "./layouts/header";
-@import "./pages/research";
-@import "./pages/explanations";
-@import "./pages/restaurant";
+@import "./layouts/research";
+@import "./layouts/steps";
+@import "./layouts/restaurant";
+@import "./layouts/menus";
+@import "./layouts/footer";

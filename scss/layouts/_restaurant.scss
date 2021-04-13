@@ -1,16 +1,19 @@
 .restaurants {
-    background: $cd-bg-neutral;
+    background: $color-bg-neutral;
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    padding-bottom: 2rem;
     &__card {
         display: flex;
         flex-direction: column;
         flex: 1 1 0;
-        margin: 1.5rem;
+        margin: 1rem 1.5rem;
         border-radius: $radius-size;
         @include no-deco;
+        @include shadow;
         color: #000;
+        position: relative;
         & >.card__img {
             object-fit: cover;
         }
@@ -30,6 +33,10 @@
     
 }
 
+.restaurants h1 {
+    margin: 2.5rem 1.5rem .5rem 1.5rem;
+}
+
 .description__txt {
     display: inline-flex;
     flex-direction: column;
@@ -45,7 +52,7 @@
 }
 
 .restau-picture {
-    max-height: 250px;
+    max-height: 25vh;
     object-fit: cover;
     border-top-left-radius: $radius-size;
     border-top-right-radius: $radius-size;

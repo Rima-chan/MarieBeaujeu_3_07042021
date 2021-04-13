@@ -8,3 +8,32 @@
     font-family: $font-logo;
     font-size: $header-lg-size;
 }
+
+/***** HEADER - MENU PAGES *****/
+
+.header {
+    display: flex;
+    justify-content: center;
+    & > .__icon {
+        color: black;
+        text-decoration: none;
+    }
+    & a {
+        @include no-deco;
+    }
+}
+
+.header__logo--menu {
+    box-shadow: none;
+    width: 80vw;
+    padding-right: 20vw;
+}
+
+.home-return {
+    color: $color-dark;
+    width: 20vw;
+    height: 100%;
+    @include flex-center;
+    @include no-deco;
+    border: none;
+}

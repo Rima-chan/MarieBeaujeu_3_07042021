@@ -1,6 +1,6 @@
 .localisation {
     margin-top: 2px;
-    background: $cd-bg-localisation;
+    background: $color-bg-localisation;
     @include flex-center;
     &__logo {
         padding: 1rem .5rem;
@@ -13,7 +13,7 @@
 }
 
 .presentation {
-    background: $cd-bg-neutral;
+    background: $color-bg-neutral;
     display: flex;
     flex-direction: column;
     justify-content: center;

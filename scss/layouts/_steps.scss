@@ -1,4 +1,4 @@
-.explanations {
+.steps {
     padding: 2rem 1rem;
     &__box{
         display: grid;
@@ -8,7 +8,7 @@
     }
 }
 
-.explanations h1 {
+.steps h1 {
     padding-bottom: 1.5rem;
 }
 
@@ -19,7 +19,7 @@
         z-index:10;
         @include flex-center;
         border-radius: 50%;
-        background: $cd-primary;
+        background: $color-primary;
         color: #fff;
         width: 1.5rem;
         height: 1.5rem;
@@ -31,13 +31,13 @@
         z-index: 1;
         padding: 1.5rem;
         border-radius: $radius-size;
-        background: $cd-bg-neutral;
+        background: $color-bg-neutral;
         @include shadow;
         transition: all 250ms;
         &:hover {
-            background-color: lighten($cd-primary, 35%);
+            background-color: lighten($color-primary, 35%);
             & > .element__icon {
-                color: $cd-primary;
+                color: $color-primary;
             }
         } 
     }
@@ -46,7 +46,7 @@
 .element {
     &__icon {
         padding: 0 .5rem;
-        color: $cd-explanation-logo;
+        color: $color-steps-logo;
 
     }
     &__txt {
