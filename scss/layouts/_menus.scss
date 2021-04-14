@@ -22,42 +22,117 @@
         h1:first-child{
             font-size: 1.8rem;
         }
+        
     }
     &__card {
+        width: 100vw;
         padding: 0 1rem 1rem 1rem;
         h2:first-child {
             text-transform: uppercase;
             font-weight: 300;
             font-size: 1.1rem;
+            animation: menu-title-apparition $apparition-duration forwards;
             &::after {
                 content: '';
                 display: block;
-                width: 12vw;
+                width: 10vw;
                 height: .5vh;
                 margin-top: .3rem;
                 background: $color-tertiary;
+                transform-origin: left;
+                animation: underline 1000ms forwards;
             }
         }
     }
 }
 .card__txt {
-    border-radius: $radius-size;
+    display: grid;
+    align-items: center;
+    grid-template: 1fr 1fr / auto 20%;
+    grid-auto-columns: 60px;
     margin: .8rem 0;
-    padding:.8rem;
     background: #fff;
+    border-radius: $radius-size;
     @include shadow;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    h3:first-child {
-        width: 100%;
-        font-size: 1.1rem;
+    transform: scale(1);
+    opacity: 0;
+    animation: apparition $apparition-duration forwards;
+    overflow: hidden;
+    @include plates-apparition(4);
+    &__plate {
+        grid-row: 1;
+        grid-column: 1 / 3;
+        padding: .8rem 0 0 .8rem;
+        font-size: 1rem;
+       
+    }   
+    &__description {
+        grid-row: 2;
+        grid-column:1 / span 2;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 0 .5rem .8rem;
+        
     }
-    p:last-child {
+    &__price {
+        grid-row: 2; 
+        grid-column: 2;
+        z-index: 10;
+        justify-self: center;
+        padding-bottom: .5rem;
         font-weight: bold;
     }
     p {
-        padding-top: .5rem;
         font-size: .9rem;
     }
+
+    &:active > .card__txt__description {
+        animation: transition ($selection-timing - $price-delay) $price-delay both;
+    }
+
+    &:active  > .checked-icon {
+        display: block !important;
+        animation: checked $selection-timing  forwards ease-out;
+        &::after {
+            animation: rotation 1000ms 2;
+        }
+    }
+
+
+    &:active > .card__txt__price {
+        animation: price ($selection-timing - $price-delay) $price-delay both ease-out;
+    }
+
 }
+
+.checked-icon {
+    display: none !important;
+    grid-column: 3;
+    grid-row: 1 / 3;
+    text-align: center;
+    height: 100%;
+    padding-top: 40%;
+    border-radius: 0 $radius-size $radius-size 0;
+    background: $color-tertiary;
+    color: #fff;
+    transform-origin: right;
+    &::before {
+        transition: transform 800ms;
+    }
+}
+
+
+// .checked-icon {
+//     grid-column: 3;
+//     grid-row: 1 / 3;
+//     text-align: center;
+//     height: 100%;
+//     width: 100%;
+//     padding-top: 25%;
+//     border-radius: 0 $radius-size $radius-size 0;
+//     background: $color-tertiary;
+//     color: #fff;
+//     visibility: collapse;
+//     transform-origin: right;
+// } 

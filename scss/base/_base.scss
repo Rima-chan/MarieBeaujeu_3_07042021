@@ -46,3 +46,59 @@ p {
         opacity: 1;
     }
 }
+
+@keyframes menu-title-apparition {
+    0% {
+        opacity: 0;
+        // transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        // transform: translateX(1);
+    }
+}
+
+@keyframes underline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes checked {
+    0% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(1);
+    }
+  }
+
+  @keyframes transition {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 80%;
+    }
+}
+  
+  @keyframes price {
+    0% {
+      transform: translateX(60px);
+    }
+    100% {
+      transform: translateX(1);
+    }
+  }
+
+  @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+  }

@@ -11,5 +11,21 @@
      text-decoration: none;
  }
 
-
+ @mixin plates-apparition($nb-plates: $nb-plates-default) {
+    @for $i from 1 through $nb-plates {
+      &--#{$i} {
+        animation-delay: ($apparition-duration / $nb-plates)* $i;
+      }
+    }
+    @keyframes apparition {
+      0% {
+        opacity: .2;
+        transform: translateY(20%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(1);
+      }
+    } 
+  }
 
