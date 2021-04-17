@@ -29,3 +29,14 @@
     } 
   }
 
+  @mixin deckstop-only {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) {
+      @content;
+    }
+  }
+
+  @mixin tablet-only {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablet)) and (max-width: map-get($map: $breakpoints, $key: deckstopSmall)) {
+      @content;
+    }
+  }

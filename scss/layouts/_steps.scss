@@ -5,11 +5,25 @@
         grid-template: auto / 4% 4% 16% 76%;
         align-items: center;
         padding-bottom: 1.5rem;
+        @include deckstop-only {
+            flex: 1 1 auto;
+            max-width: 400px;
+            padding: 1rem;
+        }
+    }
+    @include deckstop-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
 .steps h1 {
     padding-bottom: 1.5rem;
+    @include deckstop-only {
+        width: 100%;
+        padding-left: 2.5rem;
+    }
 }
 
 .box {

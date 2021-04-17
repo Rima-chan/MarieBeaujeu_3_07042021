@@ -1,6 +1,6 @@
 /******* MAIN BUTTON *******/
 .btn {
-    border-radius: 30px;
+    border-radius: $radius-btn;
     background: $btn-bg;
     color: #fff;
     text-decoration: none;
@@ -18,6 +18,13 @@
     &:active {
         @include no-deco; 
     }
+    @include deckstop-only {
+        width: 23vw;
+        align-self: center;
+    }
+    @include tablet-only {
+        width: 40vw;
+    }
 }
 
 
@@ -27,12 +34,9 @@
 }
 
  .like-btn {
-    width: 13vw;
-    height: 9vw;
-    @include flex-center;  
+    @include flex-center;
     & > .__icon {
         display: block;
-        stroke-width: 1px;
     } 
     
  }
@@ -53,15 +57,25 @@
     font-weight: 900 !important;
     color: transparent;
     @include flex-center;
-    animation: heart-btn 300ms ease-in-out;
+    animation: heart-btn 300ms cubic-bezier(.99,.01,.37,.97);
     & > .far {
         font-weight: 900;
+    }
+}
+
+.like-btn-small {
+    height: 4vh;
+    @include deckstop-only {
+        width: 8vw;
     }
 }
 
 /******* MENU PAGE - COMMAND BUTTON *********/
 
 .btn-command {
-    width: 50%;
+    width: 200px;
     margin: 2rem 3rem 4rem 3rem;
+    @include deckstop-only {
+        margin-bottom: 3rem;
+    }
 }

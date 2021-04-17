@@ -1,19 +1,19 @@
 .header__logo {
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     padding: .5rem 0;
     box-shadow:0px 2px 3px #918b91c0;
     font-family: $font-logo;
     font-size: $header-lg-size;
+    @include deckstop-only {
+        font-size: $header-lg-size * 1.5;
+    }
 }
 
 /***** HEADER - MENU PAGES *****/
 
 .header {
     display: flex;
-    justify-content: center;
     & > .__icon {
         color: black;
         text-decoration: none;
