@@ -21,7 +21,6 @@ footer {
 
 .footer__list {
     padding: 1rem 1.5rem;
-    list-style: none;
     @include deckstop-only {
         display: flex;
     }
@@ -31,7 +30,6 @@ footer ul li {
     padding-bottom: .5rem;
     & > a {
         color: #fff;
-        @include no-deco;
         padding-left: .5rem;;
     }
     & > footer-icon {

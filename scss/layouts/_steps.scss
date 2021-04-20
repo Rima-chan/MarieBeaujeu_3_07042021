@@ -1,70 +1,93 @@
 .steps {
+    display: flex;
+    flex-direction: column;
     padding: 2rem 1rem;
-    &__box{
-        display: grid;
-        grid-template: auto / 4% 4% 16% 76%;
-        align-items: center;
+    & > h1 {
         padding-bottom: 1.5rem;
-        @include deckstop-only {
-            flex: 1 1 auto;
-            max-width: 400px;
-            padding: 1rem;
-        }
+        width: 100%;
     }
+}
+
+.steps-list {
     @include deckstop-only {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        justify-content: space-around;
     }
-}
-
-.steps h1 {
-    padding-bottom: 1.5rem;
-    @include deckstop-only {
-        width: 100%;
-        padding-left: 2.5rem;
-    }
-}
-
-.box {
-    &__number {
-        grid-column: 1 / 3;
-        grid-row: 1;
-        z-index:10;
-        @include flex-center;
-        border-radius: 50%;
-        background: $color-primary;
-        color: #fff;
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 0.8rem;
-    }
-    &__element {
-        grid-column: 2 / 5;
-        grid-row: 1;
-        z-index: 1;
-        padding: 1.5rem;
-        border-radius: $radius-size;
-        background: $color-bg-neutral;
-        @include shadow;
-        transition: all 250ms;
-        &:hover {
-            background-color: lighten($color-primary, 35%);
-            & > .element__icon {
-                color: $color-primary;
+    &__item {
+        height: 10vh;
+        display: grid;
+        grid-template: auto / 10px 10px 1fr;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        @include deckstop-only {
+            flex: 1;
+            margin-right: 2rem;
+        }
+        @include tablet-only {
+            width: 90vw;
+        }
+        & > .item--txt {
+            height: 100%;
+            grid-column: 2 / 4;
+            grid-row: 1;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+            background-color: $color-bg-neutral;
+            border-radius: $radius-size $radius-size;
+            font-size: 1rem;
+            font-weight: bold;
+            @include shadow;
+            &:hover {
+                background-color: lighten($color-primary, 35%);
+                &::before {
+                    color: $color-primary;
+                }
+            } 
+            &::before {
+                padding: 0 2rem;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                font-size: 1.5rem;
+                color: $color-bg-neutral-dark;
             }
-        } 
+        }
+    }
+    
+}
+
+ol {
+    counter-reset: li;
+    li {
+        counter-increment: li;
+        &::before {
+            content:counter(li);
+            grid-row: 1;
+            grid-column: 1 / 3;
+            @include flex-center;
+            border-radius: 50%;
+            background: $color-primary;
+            color: #fff;
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
     }
 }
 
-.element {
-    &__icon {
-        padding: 0 .5rem;
-        color: $color-bg-neutral-dark;
 
-    }
-    &__txt {
-        padding: 0 1rem;
-        font-weight: bold;
-    }
+/******* LIST ICONS *******/
+.item--txt--smartphone::before {
+    content: '\f3cd';
+}
+
+.item--txt--menu::before {
+    content: '\f0ca';
+}
+
+.item--txt--restau::before {
+    content: '\f54e';
 }

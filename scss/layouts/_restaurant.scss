@@ -9,13 +9,19 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    h1 {
+        margin: 2.5rem 1.5rem .5rem 1.5rem;
+        @include deckstop-only {
+            width: 100%;
+            padding-left: 2.5rem;
+        }
+    }
     &__card {
         display: flex;
         flex-direction: column;
         flex: 1 1 0;
         margin: 1rem 1.5rem;
         border-radius: $radius-size;
-        @include no-deco;
         @include shadow;
         color: #000;
         position: relative;
@@ -23,44 +29,31 @@
             flex: 1 1 275px;
             max-width: 300px;
         }
-        & >.card__img {
+        &--img {
             object-fit: cover;
         }
-        & >.card__description {
+        &--description {
             padding: 1rem;
             background: #fff;
             border-bottom-left-radius: $radius-size;
             border-bottom-right-radius: $radius-size;
             display: flex;
             justify-content: space-between;
-            align-items: center;    
-        }
-        &:active {
-            @include no-deco;
+            align-items: center; 
+            & > .restaurant-infos {
+                display: inline-flex;
+                flex-direction: column;
+                flex-grow: 1;
+                text-decoration: none;
+                margin-right: 2rem;
+
+            }   
         }
     }
-    
-}
-
-.restaurants h1 {
-    margin: 2.5rem 1.5rem .5rem 1.5rem;
-    @include deckstop-only {
-        width: 100%;
-        padding-left: 2.5rem;
-    }
-}
-
-.description__txt {
-    display: inline-flex;
-    flex-direction: column;
-    flex-grow: 1;
-    text-decoration: none;
-    margin-right: 2rem;
     
 }
 
 .card-link {
-    @include no-deco;
     color: #000;
 }
 

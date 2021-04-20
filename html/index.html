@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="header__logo">ohmyfood</div>
     </header>
     <main>
-        <section class="research">
+        <section class="hero">
             <div class="localisation">
                 <span class="localisation__logo">
                     <i class="fas fa-map-marker-alt"></i>
@@ -29,40 +29,30 @@
                 <button class="btn"><span class="btn__txt">Explorez nos restaurants</span></button>
             </div>
         </section>
-        <section class="steps">
+        <aside class="steps">
             <h1>Fonctionnement</h1>
-            <div class="steps__box box">
-                <div class="box__number">1</div>
-                <div class="box__element">
-                    <span class="element__icon"><i class="fas fa-mobile-alt fa-lg"></i></span>
-                    <span class="element__txt">Choissisez un restaurant</span>
-                </div> 
-            </div>
-            <div class="steps__box box">
-                <div class="box__number">2</div>
-                <div class="box__element">
-                    <span class="element__icon"><i class="fas fa-list-ul fa-lg"></i></span>
-                    <span class="element__txt">Composez votre menu</span>
-                </div> 
-            </div>
-            <div class="steps__box box">
-                <div class="box__number">3</div>
-                <div class="box__element">
-                    <span class="element__icon"><i class="fas fa-store fa-lg"></i></span>
-                    <span class="element__txt">Dégustez au restaurant</span>
-                </div> 
-            </div>
-        </section> 
+            <ol class="steps-list">
+                <li class="steps-list__item">
+                    <p class="item--txt item--txt--smartphone">Choissisez un restaurant</p>
+                </li>
+                <li class="steps-list__item">
+                    <p class="item--txt item--txt--menu">Composez votre menu</p>
+                </li>
+                <li class="steps-list__item">
+                    <p class="item--txt item--txt--restau">Dégustez au restaurant</p>
+                </li>
+            </ol>
+        </aside> 
         <section class="restaurants">
             <h1>Restaurants</h1>
-            <div class="restaurants__card">
+            <article class="restaurants__card">
                 <a href="taste-menu.html">
-                    <div class="card__img new-tag">
+                    <div class="restaurants__card--img new-tag">
                         <img src="pictures/palette-gout.jpg" alt="img-restau-palette" class="responsive restau-picture">
                     </div>
                 </a>
-                <div class="card__description">
-                    <div class="description__txt">
+                <div class="restaurants__card--description">
+                    <div class="restaurant-infos">
                         <a href="taste-menu.html" class="card-link">
                             <h2>La palette du goût</h2>
                             <p>Ménilmontant</p>
@@ -75,16 +65,16 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </article>
             
-            <div class="restaurants__card">
+            <article class="restaurants__card">
                 <a href="enchanted-menu.html">
-                    <div class="card__img new-tag">
+                    <div class="restaurants__card--img new-tag">
                         <img src="pictures/note-enchantee.jpg" alt="img-restau-enchante" class="responsive restau-picture">
                     </div>
                 </a>
-                <div class="card__description">
-                    <div class="description__txt">
+                <div class="restaurants__card--description">
+                    <div class="restaurant-infos">
                         <a href="enchanted-menu.html" class="card-link">
                             <h2>La note enchantée</h2>
                             <p>Charonne</p>
@@ -97,17 +87,17 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </article>
 
             
-            <div class="restaurants__card">
+            <article class="restaurants__card">
                 <a href="french-menu.html">
-                    <div class="card__img">
+                    <div class="restaurants__card--img">
                         <img src="pictures/française.jpg" alt="img-restau-français" class="responsive restau-picture">
                     </div>
                 </a>
-                <div class="card__description">
-                    <div class="description__txt">
+                <div class="restaurants__card--description">
+                    <div class="restaurant-infos">
                         <a href="french-menu.html" class="card-link">
                             <h2>A la française</h2>
                             <p>Cité rouge</p>
@@ -120,16 +110,16 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="restaurants__card">
+            <article class="restaurants__card">
                 <a href="sens-menu.html">
-                    <div class="card__img">
+                    <div class="restaurants__card--img">
                         <img src="pictures/delice-sens.jpg" alt="img-restau-delice" class="responsive restau-picture">
                     </div>
                 </a>
-                <div class="card__description">
-                    <div class="description__txt">
+                <div class="restaurants__card--description">
+                    <div class="restaurant-infos">
                         <a href="sens-menu.html" class="card-link">
                             <h2>Le délice des sens</h2>
                             <p>Folie-Méricourt</p>
@@ -142,7 +132,7 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
     <footer>
