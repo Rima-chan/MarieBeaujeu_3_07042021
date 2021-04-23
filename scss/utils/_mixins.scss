@@ -7,10 +7,6 @@
     box-shadow: 2px 2px 10px #BFBABA;
 }
 
- @mixin no-deco{
-     text-decoration: none;
- }
-
  @mixin plates-apparition($nb-plates: $nb-plates-default) {
     @for $i from 1 through $nb-plates {
       &--#{$i} {
@@ -24,7 +20,7 @@
       }
       100% {
         opacity: 1;
-        transform: translateY(1);
+        transform: translateY(0);
       }
     } 
   }

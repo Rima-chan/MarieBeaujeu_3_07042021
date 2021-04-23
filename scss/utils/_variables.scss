@@ -6,6 +6,9 @@ $color-bg-neutral: #f6f6f6;
 $color-bg-neutral-dark: #7e7e7e;    
 $color-bg-localisation: #eaeaea;
 $color-dark: #353535;
+$color-white: #fff;
+$color-black: #000;
+
 
 $btn-bg-2: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(175,95,219,1) 24%, rgba(183,98,219,1) 43%, rgba(201,104,219,1) 56%, rgba(222,111,219,1) 75%, rgba(244,118,218,1) 100%);
 $btn-bg: linear-gradient(173deg, rgba(255,121,218,1) 0%, rgba(214,108,219,1) 39%, rgba(171,94,220,1) 85%, rgba(155,89,220,1) 100%);
@@ -16,7 +19,8 @@ $font-logo: 'Shrikhand', sans-serif;
 $font-txt: 'Roboto', sans-serif;
 
 $header-lg-size: 2rem;
-$font-title-size: 1.5rem;
+$font-title-size: 1.5rem; /* h1 */
+$font-size: 1rem;
 
 $radius-size: 20px;
 $radius-btn: 30px;
@@ -36,4 +40,14 @@ $breakpoints: (
     mobile: 580px,
     tablet: 769px,
     deckstopSmall: 992px
-)
+);
+
+/******** LOADER *********/
+$bg-bubble: linear-gradient(173deg, rgba(255,121,218,1) 0%, rgba(214,108,219,1) 39%, rgba(171,94,220,1) 85%, rgba(155,89,220,1) 100%);
+$bubble-timing: 2000ms;
+$nb-bubble:6;
+$bubble-delay: $bubble-timing / $nb-bubble;
+
+$cook-timing: 1500ms;
+$nb-food: 3;
+$cook-delay: $cook-timing / $nb-food;

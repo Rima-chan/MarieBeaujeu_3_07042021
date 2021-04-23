@@ -28,6 +28,6 @@
     @include flex-center;
     border: none;
     @include deckstop-only {
-        font-size: 1.5rem;
+        font-size: $font-title-size;
     }
 }

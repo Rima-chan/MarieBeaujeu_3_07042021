@@ -23,7 +23,7 @@
         justify-content: space-between;
         align-items: center;
         h1:first-child{
-            font-size: 1.8rem;
+            font-size: $font-title-size + .3;
         }
         @include deckstop-only {
             justify-content: flex-start;
@@ -43,7 +43,7 @@
         h2:first-child {
             text-transform: uppercase;
             font-weight: 300;
-            font-size: 1.1rem;
+            font-size: $font-size + .1;
             animation: menu-title-apparition $apparition-duration forwards;
             &::after {
                 content: '';
@@ -69,7 +69,7 @@
     overflow: hidden;
     border-radius: $radius-size;
     @include shadow;
-    background: #fff;
+    background: $color-white;
     transform: scale(1);
     opacity: 0;
     animation: apparition $apparition-duration forwards;
@@ -98,7 +98,7 @@
         transition: transform $checked-duration;
     }
     p {
-        font-size: .9rem;
+        font-size: $font-size - .1;
     }
     &__check-icon {
         height: 100%;
@@ -107,7 +107,7 @@
         @include flex-center;
         border-radius: 0 $radius-size $radius-size 0;
         background: $color-tertiary;
-        color: #fff;
+        color: $color-white;
         transform-origin: right;
         transform: translateX(100px);
         transition: transform $checked-duration;
