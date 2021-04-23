@@ -1,0 +1,14 @@
+.new-tag::after {
+    content: 'Nouveau';
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 5%;
+    right: 5%;
+    padding: .5rem 1rem;
+    border-radius: $radius-size - 15;
+    background: $color-tertiary;
+    color: darken($color-tertiary, 40%);
+    font-weight: bold;
+}

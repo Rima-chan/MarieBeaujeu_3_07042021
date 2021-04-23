@@ -1,0 +1,39 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    width: 100vw;
+    margin: 0 auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+}
+
+.responsive {
+    width:100%;
+    height:auto;
+    display: block;
+}
+
+h1 {
+    font-size: $font-title-size;
+}
+
+h2 {
+    font-size: $font-title-size - .3rem;
+    padding-bottom: .5rem;
+}
+

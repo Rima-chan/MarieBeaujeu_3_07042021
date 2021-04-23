@@ -1,0 +1,107 @@
+@keyframes heart-btn {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    90% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes menu-title-apparition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bubble {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    25% {
+      transform: scale(0.5) translate(0,0);
+      opacity: 0.5; 
+    }
+    50% {
+      transform: scale(1) translate(0, -20px);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1) translate(0, -30px);
+      opacity: 1; 
+    }
+    100% {
+      transform: scale(1) translate(0, -60px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes stove {
+    0% {transform: translate(0, 0);}
+    10% {transform: rotate(5deg);}
+    20% {transform: rotate(-10deg);}
+    95% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
+  }
+  
+  @keyframes stove-handle {
+    0% {transform: translate(0,0);}
+    10% { transform: translate(0, -10%) rotate(25deg);}
+    20% {transform: translate(0, 10%) rotate(-10deg);}
+    40% {transform: translate(0, -40%) rotate(10deg);}
+    100% { transform: translate(0,0);}
+  }
+  
+  @keyframes food-2 {
+    0% {transform: translate(0);}
+    10% {transform: translate(55px, -1px);}
+    20% {transform: translate(63px, -5px) rotate(0deg);}
+    28% {transform: translate(70px, -50px);}
+    35% {transform: translate(68px, -55px) rotate(180deg);}
+    40% {transform: translate(60px, -60px);}
+    45% {transform: translate(52px, -65px) rotate(360deg);}
+    50% {transform: translate(42px, -69px);}
+    55% {transform: translate(31px, -67px);}
+    60% {transform: translate(22px, -64px) rotate(-180deg);}
+    65% {transform: translate(15px, -60px);}
+    70% {transform: translate(6px, -54px) ;}
+    75% {transform: translate(-1px, -47px) rotate(-90deg);}
+    80% {transform: translate(-7px, -36px);}
+    85% {transform: translate(-9px, -24px) rotate(0deg);}
+    90% {transform: translate(-7px, -8px) rotate(90deg);}
+    100% { transform: translate(0, 0);}
+  }
+
+  @keyframes spinner {
+      0% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      95% {
+        opacity: 0;
+        z-index: 100;
+      }
+      100% {
+          z-index: -1000;
+      }
+  }

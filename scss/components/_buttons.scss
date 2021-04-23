@@ -1,0 +1,75 @@
+/******* MAIN BUTTON *******/
+.btn {
+    border-radius: $radius-btn;
+    background: $btn-bg;
+    color: $color-white;
+    margin: 0 3rem;
+    padding: 1rem;
+    font-size: $font-size * 1.1;
+    outline: none;
+    border: none;
+    @include shadow;
+    transition: all 250ms;
+    &:hover {
+        background: $btn-bg-hover;
+        box-shadow: 2px 2px 10px #646363;
+    }
+    @include deckstop-only {
+        width: 23vw;
+        align-self: center;
+    }
+    @include tablet-only {
+        width: 40vw;
+    }
+}
+
+
+/***** HEART BUTTON *****/
+.visually-hidden {
+    visibility: hidden;
+}
+
+ .like-btn {
+    @include flex-center;
+    & > .__icon {
+        display: block;
+    } 
+ }
+
+.like-btn label {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    color: $color-bg-neutral-dark;
+}
+
+.like-btn input[type=checkbox]:checked + label {
+    width: 100%;
+    height: 100%;
+    background: $btn-bg;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    @include flex-center;
+    animation: heart-btn 300ms cubic-bezier(.99,.01,.37,.97);
+    & > .far {
+        font-weight: 900;
+    }
+}
+
+.like-btn-small {
+    height: 4vh;
+    @include deckstop-only {
+        width: 8vw;
+    }
+}
+
+/******* MENU PAGE - COMMAND BUTTON *********/
+
+.btn-command {
+    width: 200px;
+    margin: 2rem 3rem 4rem 3rem;
+    @include deckstop-only {
+        margin-bottom: 3rem;
+    }
+}

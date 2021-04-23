@@ -1,0 +1,33 @@
+.header {
+    width: 100vw;
+    @include flex-center;
+    box-shadow:0px 2px 3px #918b91c0;
+    &__logo {
+    padding: .5rem 0;
+    font-family: $font-logo;
+    font-size: $header-lg-size;
+    @include deckstop-only {
+        font-size: $header-lg-size * 1.5;
+        }
+    }
+}
+
+/***** HEADER - MENU PAGES *****/
+
+.header__logo--menu {
+    width: 80vw;
+    padding-right: 20vw;
+    text-align: center;
+    box-shadow: none;
+}
+
+.home-return {
+    color: $color-dark;
+    width: 20vw;
+    height: 100%;
+    @include flex-center;
+    border: none;
+    @include deckstop-only {
+        font-size: $font-title-size;
+    }
+}

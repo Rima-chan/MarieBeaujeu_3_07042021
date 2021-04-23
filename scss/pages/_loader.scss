@@ -1,0 +1,122 @@
+.spinner-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba($color: $color-white, $alpha: 0.9);
+    z-index: 100;
+    opacity: 0;
+    animation: spinner 3s forwards;
+  }
+  
+  .spinner {
+    position: relative;
+    transform: translate(-30px,0);
+  }
+  
+  .stove {
+    position: relative;
+    &--handle {
+      content:'';
+      display:block;
+      width: 80px;
+      height: 8px;
+      position: absolute;
+      left: -74px;
+      bottom: -65px;
+      background-color: transparent;
+      border-top: 5px solid $color-black;
+      border-left: 3px solid transparent;
+      border-radius: 100%;
+      transform: rotate(15deg);
+      transform-origin: right;
+      animation: stove-handle $cook-timing 250ms infinite ;
+    }
+    &--base {
+      width: 100px;
+      height: 25px;
+      background-color: $color-black;
+      border-radius: 0 0 40px 40px;
+      position: absolute;
+      top: 50px;
+      transform-origin: left;
+      animation: stove $cook-timing 250ms infinite ;
+      
+    }
+  }
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: $bg-bubble;
+    opacity: 1;
+    animation: bubble $bubble-timing infinite ease-in;
+    @for $i from 1 through $nb-bubble {
+      &--#{$i} {
+        animation-delay: $bubble-delay * ((0.5)* $i);
+      }
+    }
+    &--1 {
+      top: 32px;
+      left: -25px;
+      width: 15px;
+      height: 15px;
+    }
+    &--2 {
+      top: 30px;
+      left: 10px;
+      width: 8px;
+      height: 8px;
+    }
+    &--3 {
+      top: 3px;
+      left: 2px;
+      width: 10px;
+      height: 10px;
+    }
+    &--4 {
+      top: -15px;
+      right: 8px;
+      width: 8px;
+      height: 8px;
+    }
+    &--5 {
+      top: 5px;
+      left: -41px;
+      width: 10px;
+      height: 10px;
+    }
+    &--6 {
+      top: 55px;
+      left: -43px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  .aliment {
+    left: 13px;
+    bottom: -64px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    animation: food-2 $cook-timing infinite ease-in;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+          animation-delay: $cook-delay * ((0.5)* $i);
+        }
+    }
+    &--1 {
+      background-color: darken(#99E2D0, 30%);
+    }
+    &--2 {
+      background-color: darken(#99E2D0, 20%);
+    }
+    &--3 {
+      background-color: darken(#99E2D0, 40%);
+    }
+  }
+  

@@ -1,0 +1,90 @@
+.steps {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    & > h1 {
+        padding-bottom: 1.5rem;
+        width: 100%;
+    }
+}
+
+.steps-list {
+    @include deckstop-only {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        height: 10vh;
+        display: grid;
+        grid-template: auto / 10px 10px 1fr;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        @include deckstop-only {
+            flex: 1;
+            margin-right: 2rem;
+        }
+        @include tablet-only {
+            width: 90vw;
+        }
+        & > .item--txt {
+            height: 100%;
+            grid-column: 2 / 4;
+            grid-row: 1;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+            background-color: $color-bg-neutral;
+            border-radius: $radius-size $radius-size;
+            font-size: $font-size;
+            font-weight: bold;
+            @include shadow;
+            transition: background 250ms, color 250ms;
+            &:hover {
+                background-color: lighten($color-primary, 35%);
+                &::before {
+                    color: $color-primary;
+                }
+            } 
+            &::before {
+                padding: 0 2rem;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                font-size: 1.5rem;
+                color: $color-bg-neutral-dark;
+            }
+            &--smartphone::before {
+                content: '\f3cd';
+            }
+            &--menu::before {
+                content: '\f0ca';
+            }
+            &--restau::before {
+                content: '\f54e';
+            }
+        }
+    }
+
+}
+
+ol {
+    counter-reset: li;
+    li {
+        counter-increment: li;
+        &::before {
+            content:counter(li);
+            grid-row: 1;
+            grid-column: 1 / 3;
+            @include flex-center;
+            border-radius: 50%;
+            background: $color-primary;
+            color: $color-white;
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: $font-size - .2;
+            z-index: 10;
+        }
+    }
+}
+

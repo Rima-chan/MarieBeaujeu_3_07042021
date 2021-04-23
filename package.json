@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "booking restaurants website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rima-chan/MarieBeaujeu_3_07042021.git"
+  },
+  "keywords": [
+    "food"
+  ],
+  "author": "marie beaujeu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rima-chan/MarieBeaujeu_3_07042021/issues"
+  },
+  "homepage": "https://github.com/Rima-chan/MarieBeaujeu_3_07042021#readme"
+}

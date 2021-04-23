@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pictures/favicon.png" type="image/png">
+    <title>Le délice des sens</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <div class="home-return">      
+                <i class="fas fa-arrow-left header__icon"></i>
+            </div>
+        </a>
+        <div class="logo header__logo header__logo--menu">
+            ohmyfood
+        </div>
+    </header>
+
+    <main>
+        <img src="pictures/delice-sens.jpg" alt="restau-main-image" class="responsive menu-picture">
+        <article class="menu">
+            <div class="menu__title">
+                <h1>Le délice des sens</h1>
+                <div class="like-btn like-btn-small">
+                    <input type="checkbox" id="toggle-8" class="visually-hidden">
+                    <label for="toggle-8">
+                        <i class="far fa-heart fa-lg like-btn__icon"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="menu__plate-card">
+                <h2>Entrées</h2>
+                <div class="plate plate--1">
+                    <h3 class="plate__name shorted">Tartare de thon</h3>
+                    <p class="plate__description shorted">Assaisonné au yuzu</p>
+                    <p class="plate__price">25€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--2">
+                    <h3 class="plate__name shorted">Bouchée de homard croustillant</h3>
+                    <p class="plate__description shorted">Et sa farandole de petits légumes</p>
+                    <p class="plate__price">35€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--3">
+                    <h3 class="plate__name shorted">Velouté de cèpes</h3>
+                    <p class="plate__description shorted">Aux truffes</p>
+                    <p class="plate__price">20€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="menu__plate-card">
+                <h2>Plats</h2>
+                <div class="plate plate--1">
+                    <h3 class="plate__name shorted">Poulet rôti aux herbes de Provence</h3>
+                    <p class="plate__description shorted">Et sa crème de truffe</p>
+                    <p class="plate__price">40€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--2">
+                    <h3 class="plate__name shorted">Langouste rôtie</h3>
+                    <p class="plate__description shorted">Et ses légumes de saison</p>
+                    <p class="plate__price">35€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--3">
+                    <h3 class="plate__name shorted">Côte de boeuf Angus</h3>
+                    <p class="plate__description shorted">Et sa purée de panais</p>
+                    <p class="plate__price">44€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="menu__plate-card">
+                <h2>Desserts</h2>
+                <div class="plate plate--1">
+                    <h3 class="plate__name shorted">Farandole de desserts</h3>
+                    <p class="plate__description shorted">Du chef</p>
+                    <p class="plate__price">18€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--2">
+                    <h3 class="plate__name shorted">Crème brulée</h3>
+                    <p class="plate__description shorted">Revisitée</p>
+                    <p class="plate__price">22€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+                <div class="plate plate--3">
+                    <h3 class="plate__name shorted">Tiramisu</h3>
+                    <p class="plate__description shorted">À la noisette</p>
+                    <p class="plate__price">23€</p>
+                    <span class="plate__check-icon">
+                        <i class="fas fa-check-circle fa-lg checked-icon"></i>
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-command"><span class="btn__txt">Commandez</span></button>     
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer__logo">ohmyfood</div>
+        <ul class="footer__list">
+            <li>
+                <i class="fas fa-utensils fa-sm footer-icon"></i>
+                <a href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+                <i class="fas fa-hands-helping fa-sm footer-icon"></i>
+                <a href="#">Devenir partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a> 
+            </li>
+            <li>
+                <a href="mailto:adresse@gmail.com">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
