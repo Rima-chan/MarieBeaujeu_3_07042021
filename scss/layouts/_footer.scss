@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: $color-dark;
     color: $color-white;
     @include deckstop-only {
@@ -6,24 +6,22 @@ footer {
         flex-wrap: wrap;
         text-align: center;
     }
-}
-
-.footer__logo {
-    padding: 1.5rem 1.5rem .5rem 1.5rem;
-    font-family: $font-logo;
-    font-size: $font-title-size;
-    @include deckstop-only {
-        width: 100%;
-        align-self: center;
-        font-size: $header-lg-size;
+    &__logo {
+        padding: 1.5rem 1.5rem .5rem 1.5rem;
+        font-family: $font-logo;
+        font-size: $font-title-size;
+        @include deckstop-only {
+            width: 100%;
+            align-self: center;
+            font-size: $header-lg-size;
+        }
     }
-}
-
-.footer__list {
-    padding: 1rem 1.5rem;
-    @include deckstop-only {
-        display: flex;
-    }
+    &__list {
+        padding: 1rem 1.5rem;
+        @include deckstop-only {
+            display: flex;
+        }
+    } 
 }
 
 footer ul li {

@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ol, ul {
@@ -723,12 +724,12 @@ ol li::before {
   text-overflow: ellipsis;
 }
 
-footer {
+.footer {
   background-color: #353535;
   color: #fff;
 }
 @media screen and (min-width: 769px) {
-  footer {
+  .footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -736,7 +737,6 @@ footer {
     text-align: center;
   }
 }
-
 .footer__logo {
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   font-family: "Shrikhand", sans-serif;
@@ -749,7 +749,6 @@ footer {
     font-size: 2rem;
   }
 }
-
 .footer__list {
   padding: 1rem 1.5rem;
 }

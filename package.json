@@ -4,7 +4,8 @@
   "description": "booking restaurants website",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./css/main.css"
+    "sass": "sass --watch ./scss/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   ],
   "author": "marie beaujeu",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Rima-chan/MarieBeaujeu_3_07042021/issues"
   },
