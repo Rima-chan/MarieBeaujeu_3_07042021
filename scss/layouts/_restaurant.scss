@@ -29,9 +29,6 @@
             flex: 1 1 275px;
             max-width: 300px;
         }
-        &--img {
-            object-fit: cover;
-        }
         &--description {
             padding: 1rem;
             background: #fff;
@@ -40,6 +37,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center; 
+            flex: 1;
             & > .restaurant-infos {
                 display: inline-flex;
                 flex-direction: column;
@@ -58,11 +56,8 @@
 }
 
 .restau-picture {
-    max-height: 25vh;
+    max-height: 200px;
     object-fit: cover;
     border-top-left-radius: $radius-size;
     border-top-right-radius: $radius-size;
-    @include tablet-only {
-        max-height: 18vh;
-    }
 }

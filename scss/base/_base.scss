@@ -21,6 +21,10 @@ body {
     font-size: 16px;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .responsive {
     width:100%;
     height:auto;

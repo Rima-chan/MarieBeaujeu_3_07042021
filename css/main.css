@@ -27,6 +27,10 @@ body {
   font-size: 16px;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .responsive {
   width: 100%;
   height: auto;
@@ -506,9 +510,6 @@ ol li::before {
     max-width: 300px;
   }
 }
-.restaurants__card--img {
-  object-fit: cover;
-}
 .restaurants__card--description {
   padding: 1rem;
   background: #fff;
@@ -517,6 +518,7 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 .restaurants__card--description > .restaurant-infos {
   display: inline-flex;
@@ -531,15 +533,10 @@ ol li::before {
 }
 
 .restau-picture {
-  max-height: 25vh;
+  max-height: 200px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-}
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  .restau-picture {
-    max-height: 18vh;
-  }
 }
 
 .menu-picture {
@@ -562,7 +559,7 @@ ol li::before {
   }
 }
 .menu__title {
-  width: 100vw;
+  width: 87vw;
   transform: translateY(-50%);
   padding: 2rem 2rem 0 1rem;
   border-radius: 40px 40px 0 0;
@@ -596,6 +593,7 @@ ol li::before {
 }
 .menu__plate-card h2:first-child {
   text-transform: uppercase;
+  padding-left: 1rem;
   font-weight: 300;
   font-size: 1.1rem;
   animation: menu-title-apparition 800ms forwards;
