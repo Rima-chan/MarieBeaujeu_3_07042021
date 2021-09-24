@@ -7,6 +7,7 @@ Activity : Online meal ordering company.
 
 ### technologies ###
 
+* HTML
 * CSS
 * Sass
 
