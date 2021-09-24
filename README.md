@@ -1,21 +1,27 @@
-OBJECTIF : créer le site ohmyfood de réservation/composition de menus dans des restaurants gastronomiques parisiens - intégrer la carte de 4 restaurants
+# OhMyFood - OpenClassRooms project #
 
-LIVRABLES : 
+## Mission ##
 
-- 1 pages d'accueil 
-- 4 pages de menu
-- Header
-- Footer
+Mock-up website integration (mobile) with CSS animations.
+Activity : Online meal ordering company.
 
-CONTRAINTES & FONCTIONNALITES :
+### technologies ###
 
-- Uniquement du CSS
-- Aucun Framework 
-- Responsive mobile, tablette & desktop
-- Validation W3C Html/Css
-- Compatible dénière version Chrome et Firefox
+* CSS
+* Sass
 
-- Animations :
-  - Boutons
-  - Page d'accueil
-  - Pages de menu
+### Architecture ###
+
+* 1 home page
+* 4 menu pages
+
+### Animations ###
+
+* Loading Spinner
+* Like button
+* Adding plate to menu
+
+____________________________________________
+
+![image](https://user-images.githubusercontent.com/77418945/134634455-9b11c3ff-0c25-45d0-8032-672731650540.png)
+
